@@ -59,12 +59,12 @@ export default function Philosophy() {
     <section
       ref={sectionRef}
       id="philosophy"
-      className="relative w-full overflow-hidden bg-slate"
+      className="relative w-full overflow-hidden bg-primary"
     >
       {/* Parallax Texture Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="philosophy-texture absolute inset-0 bg-cover bg-center opacity-[0.06]"
+          className="philosophy-texture absolute inset-0 bg-cover bg-center opacity-[0.1]"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?w=1920&q=80&auto=format')`,
             height: '140%',
@@ -78,7 +78,7 @@ export default function Philosophy() {
         <div className="max-w-5xl mx-auto">
           {/* Neutral Statement */}
           <div className="mb-12">
-            <p className="font-heading text-lg md:text-xl text-white/30 leading-relaxed">
+            <p className="font-heading text-lg md:text-xl text-white/50 leading-relaxed">
               {splitWords(
                 'A maioria das empresas de tecnologia foca em: entregar projetos genéricos, rápidos e descartáveis.'
               )}
@@ -103,11 +103,11 @@ export default function Philosophy() {
 
           {/* Decorative line */}
           <div className="mt-16 flex items-center gap-4">
-            <div className="h-px flex-1 bg-background/10"></div>
+            <div className="h-px flex-1 bg-white/10"></div>
             <span className="font-mono-data text-xs text-white/20 uppercase tracking-widest">
               Manifesto
             </span>
-            <div className="h-px flex-1 bg-background/10"></div>
+            <div className="h-px flex-1 bg-white/10"></div>
           </div>
         </div>
       </div>
