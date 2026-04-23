@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================================
+   DESIGN SYSTEM — MIDNIGHT LUXE (Preset B)
+   ================================================ */
+
+/* --- Noise Overlay (feTurbulence SVG) --- */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+}
+
+/* --- Base Resets --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FAF8F5;
+  color: #2A2A35;
+  overflow-x: hidden;
+}
+
+/* --- Typography Utilities --- */
+.font-drama {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-mono-data {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.tracking-tight-custom {
+  letter-spacing: -0.03em;
+}
+
+.tracking-tighter-custom {
+  letter-spacing: -0.05em;
+}
+
+/* --- Magnetic Button --- */
+.btn-magnetic {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+.btn-magnetic:hover {
+  transform: scale(1.03);
+}
+
+.btn-magnetic:active {
+  transform: scale(0.98);
+}
+
+.btn-magnetic .btn-bg {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
+}
+
+.btn-magnetic:hover .btn-bg {
+  left: 0;
+}
+
+.btn-primary {
+  background-color: #C9A84C;
+  color: #0D0D12;
+}
+
+.btn-primary .btn-bg {
+  background-color: #D4B85C;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #FAF8F5;
+  border: 1px solid rgba(250, 248, 245, 0.25);
+}
+
+.btn-outline:hover {
+  border-color: #C9A84C;
+  color: #C9A84C;
+}
+
+.btn-outline .btn-bg {
+  background-color: rgba(201, 168, 76, 0.08);
+}
+
+/* --- Interactive Lift --- */
+.interactive-lift {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.interactive-lift:hover {
+  transform: translateY(-1px);
+}
+
+/* --- Card Surface --- */
+.card-surface {
+  background-color: #FAF8F5;
+  border: 1px solid rgba(13, 13, 18, 0.06);
+  border-radius: 2rem;
+  box-shadow: 0 4px 32px rgba(13, 13, 18, 0.04),
+              0 1px 4px rgba(13, 13, 18, 0.02);
+}
+
+.card-surface-dark {
+  background-color: #0D0D12;
+  border: 1px solid rgba(250, 248, 245, 0.06);
+  border-radius: 2rem;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Navbar Transitions --- */
+.navbar-transparent {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar-solid {
+  background-color: rgba(250, 248, 245, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-color: rgba(13, 13, 18, 0.08);
+}
+
+/* --- Hero Background --- */
+.hero-gradient {
+  background: linear-gradient(
+    to top,
+    #0D0D12 0%,
+    rgba(13, 13, 18, 0.95) 20%,
+    rgba(13, 13, 18, 0.7) 50%,
+    rgba(13, 13, 18, 0.4) 80%,
+    rgba(13, 13, 18, 0.2) 100%
+  );
+}
+
+/* --- Section Utilities --- */
+.section-padding {
+  padding: 6rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 8rem 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-padding {
+    padding: 10rem 5rem;
+  }
+}
+
+/* --- Pulsing Dot --- */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  position: relative;
+}
+
+.pulse-dot::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(34, 197, 94, 0.3);
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+/* --- Accent Pulsing Dot --- */
+.pulse-dot-accent {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #C9A84C;
+  position: relative;
+}
+
+.pulse-dot-accent::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(201, 168, 76, 0.3);
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* --- Typewriter Cursor --- */
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background-color: #C9A84C;
+  animation: blink-cursor 1s step-end infinite;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A84C;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4B85C;
+}
+
+/* --- Selection --- */
+::selection {
+  background-color: rgba(201, 168, 76, 0.3);
+  color: #0D0D12;
+}
