@@ -9,8 +9,9 @@ export default {
       colors: {
         primary: '#0D0D12',
         accent: '#C9A84C',
-        background: '#FAF8F5',
-        slate: '#2A2A35',
+        background: '#1A1A24',
+        slate: '#A1A1AA',
+        white: '#FAF8F5',
         'accent-dim': '#A88B3D',
         'accent-glow': '#D4B85C',
       },

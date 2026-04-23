@@ -23,20 +23,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <h3 className="font-heading font-bold text-2xl text-background tracking-tight-custom mb-3">
+            <h3 className="font-heading font-bold text-2xl text-white tracking-tight-custom mb-3">
               Thiago Lima
             </h3>
-            <p className="font-heading text-sm text-background/40 leading-relaxed mb-6 max-w-xs">
+            <p className="font-heading text-sm text-white/40 leading-relaxed mb-6 max-w-xs">
               Automações inteligentes, sites de alta conversão e presença digital premium.
             </p>
-            <span className="font-mono-data text-xs text-background/20 uppercase tracking-widest">
+            <span className="font-mono-data text-xs text-white/20 uppercase tracking-widest">
               Powered by CZTechnology
             </span>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="font-heading font-semibold text-sm text-background/60 uppercase tracking-widest mb-6">
+            <h4 className="font-heading font-semibold text-sm text-white/60 uppercase tracking-widest mb-6">
               Navegação
             </h4>
             <ul className="space-y-3">
@@ -44,7 +44,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="font-heading text-sm text-background/40 hover:text-accent transition-colors interactive-lift inline-block"
+                    className="font-heading text-sm text-white/40 hover:text-accent transition-colors interactive-lift inline-block"
                   >
                     {link.label}
                   </a>
@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="font-heading font-semibold text-sm text-background/60 uppercase tracking-widest mb-6">
+            <h4 className="font-heading font-semibold text-sm text-white/60 uppercase tracking-widest mb-6">
               Legal
             </h4>
             <ul className="space-y-3">
@@ -63,7 +63,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-heading text-sm text-background/40 hover:text-accent transition-colors interactive-lift inline-block"
+                    className="font-heading text-sm text-white/40 hover:text-accent transition-colors interactive-lift inline-block"
                   >
                     {link.label}
                   </a>
@@ -79,14 +79,14 @@ export default function Footer() {
         {/* Bottom Row */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <span className="font-heading text-xs text-background/20">
+          <span className="font-heading text-xs text-white/20">
             © {currentYear} Thiago Lima. Todos os direitos reservados.
           </span>
 
           {/* System Status */}
           <div className="flex items-center gap-3">
             <div className="pulse-dot"></div>
-            <span className="font-mono-data text-xs text-background/30 uppercase tracking-widest">
+            <span className="font-mono-data text-xs text-white/30 uppercase tracking-widest">
               Sistema Operacional
             </span>
           </div>

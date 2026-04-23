@@ -214,11 +214,11 @@ export default function Protocol() {
           <span className="font-mono-data text-xs text-accent uppercase tracking-widest mb-4 block">
             Processo
           </span>
-          <h2 className="font-heading font-black text-3xl md:text-5xl text-background tracking-tighter-custom leading-tight mb-4">
+          <h2 className="font-heading font-black text-3xl md:text-5xl text-white tracking-tighter-custom leading-tight mb-4">
             Protocolo de
             <span className="font-drama italic text-accent"> entrega.</span>
           </h2>
-          <p className="font-heading text-base text-background/40 max-w-lg">
+          <p className="font-heading text-base text-white/40 max-w-lg">
             Cada projeto segue um processo cirúrgico de 3 etapas para
             garantir resultados previsíveis.
           </p>
@@ -238,7 +238,7 @@ export default function Protocol() {
               <span className="font-mono-data text-sm text-accent mb-4 block">
                 {step.number}
               </span>
-              <h3 className="font-heading font-black text-3xl md:text-5xl text-primary tracking-tighter-custom mb-6">
+              <h3 className="font-heading font-black text-3xl md:text-5xl text-white tracking-tighter-custom mb-6">
                 {step.title}
               </h3>
               <p className="font-heading text-base text-slate/60 leading-relaxed">

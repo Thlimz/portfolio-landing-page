@@ -77,7 +77,7 @@ export default function Hero() {
           {/* Title: Bold Sans */}
           <h1
             ref={titleRef}
-            className="font-heading font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tighter-custom text-background mb-2 opacity-0"
+            className="font-heading font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tighter-custom text-white mb-2 opacity-0"
           >
             Excelência encontra
           </h1>
@@ -93,7 +93,7 @@ export default function Hero() {
           {/* Description */}
           <p
             ref={descRef}
-            className="font-heading text-base md:text-lg text-background/60 max-w-lg leading-relaxed mb-8 opacity-0"
+            className="font-heading text-base md:text-lg text-white/60 max-w-lg leading-relaxed mb-8 opacity-0"
           >
             Transformo empresas com automações inteligentes, sites de alta
             conversão e presença digital que gera resultados reais.
@@ -117,7 +117,7 @@ export default function Hero() {
             className="mt-10 flex items-center gap-3 opacity-0"
           >
             <div className="pulse-dot-accent"></div>
-            <span className="font-mono-data text-xs text-background/40 uppercase tracking-widest">
+            <span className="font-mono-data text-xs text-white/40 uppercase tracking-widest">
               Powered by CZTechnology
             </span>
           </div>

@@ -34,7 +34,7 @@ export default function Navbar() {
       <a
         href="#hero"
         className={`font-heading font-bold text-lg tracking-tight-custom transition-colors duration-500 ${
-          isScrolled ? 'text-primary' : 'text-background'
+          isScrolled ? 'text-white' : 'text-white'
         }`}
       >
         Thiago Lima
@@ -48,8 +48,8 @@ export default function Navbar() {
             href={link.href}
             className={`font-heading text-sm font-medium interactive-lift transition-colors duration-500 ${
               isScrolled
-                ? 'text-slate hover:text-primary'
-                : 'text-background/70 hover:text-background'
+                ? 'text-slate hover:text-white'
+                : 'text-white/70 hover:text-white'
             }`}
           >
             {link.label}
@@ -66,7 +66,7 @@ export default function Navbar() {
         id="mobile-menu-toggle"
         onClick={() => setIsMobileOpen(!isMobileOpen)}
         className={`md:hidden flex flex-col gap-1.5 p-2 transition-colors ${
-          isScrolled ? 'text-primary' : 'text-background'
+          isScrolled ? 'text-white' : 'text-white'
         }`}
         aria-label="Menu de navegação"
       >
@@ -77,13 +77,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileOpen && (
-        <div className="absolute top-full left-0 right-0 mt-3 p-6 rounded-[2rem] navbar-solid border border-primary/5 flex flex-col gap-4 md:hidden">
+        <div className="absolute top-full left-0 right-0 mt-3 p-6 rounded-[2rem] navbar-solid border border-white/5 flex flex-col gap-4 md:hidden">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setIsMobileOpen(false)}
-              className="font-heading text-sm font-medium text-slate hover:text-primary transition-colors"
+              className="font-heading text-sm font-medium text-slate hover:text-white transition-colors"
             >
               {link.label}
             </a>

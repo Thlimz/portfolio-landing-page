@@ -78,7 +78,7 @@ export default function Philosophy() {
         <div className="max-w-5xl mx-auto">
           {/* Neutral Statement */}
           <div className="mb-12">
-            <p className="font-heading text-lg md:text-xl text-background/30 leading-relaxed">
+            <p className="font-heading text-lg md:text-xl text-white/30 leading-relaxed">
               {splitWords(
                 'A maioria das empresas de tecnologia foca em: entregar projetos genéricos, rápidos e descartáveis.'
               )}
@@ -88,15 +88,15 @@ export default function Philosophy() {
           {/* Contrast Statement — Massive */}
           <div>
             <p className="text-2xl md:text-4xl lg:text-5xl leading-tight">
-              {splitWords('Eu foco em:', 'font-heading font-bold text-background')}
+              {splitWords('Eu foco em:', 'font-heading font-bold text-white')}
               <br />
-              {splitWords('construir', 'font-drama italic text-background text-3xl md:text-5xl lg:text-6xl')}
+              {splitWords('construir', 'font-drama italic text-white text-3xl md:text-5xl lg:text-6xl')}
               <span className="word-reveal inline-block mr-[0.3em] opacity-0 font-drama italic text-accent text-3xl md:text-5xl lg:text-6xl">
                 instrumentos digitais
               </span>
               {splitWords(
                 'que geram resultado real.',
-                'font-drama italic text-background text-3xl md:text-5xl lg:text-6xl'
+                'font-drama italic text-white text-3xl md:text-5xl lg:text-6xl'
               )}
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function Philosophy() {
           {/* Decorative line */}
           <div className="mt-16 flex items-center gap-4">
             <div className="h-px flex-1 bg-background/10"></div>
-            <span className="font-mono-data text-xs text-background/20 uppercase tracking-widest">
+            <span className="font-mono-data text-xs text-white/20 uppercase tracking-widest">
               Manifesto
             </span>
             <div className="h-px flex-1 bg-background/10"></div>

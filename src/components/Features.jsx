@@ -31,7 +31,7 @@ function ShufflerCard() {
   return (
     <div className="card-surface p-8 h-full flex flex-col" id="feature-card-shuffler">
       <div className="mb-6">
-        <h3 className="font-heading font-bold text-xl text-primary tracking-tight-custom mb-2">
+        <h3 className="font-heading font-bold text-xl text-white tracking-tight-custom mb-2">
           Automações Inteligentes
         </h3>
         <p className="font-heading text-sm text-slate/60 leading-relaxed">
@@ -50,7 +50,7 @@ function ShufflerCard() {
           return (
             <div
               key={itemIdx}
-              className="absolute left-0 right-0 rounded-xl border border-primary/10 bg-background p-4 shadow-sm"
+              className="absolute left-0 right-0 rounded-xl border border-white/10 bg-background p-4 shadow-sm"
               style={{
                 top: `${yOffset}px`,
                 transform: `scale(${scale})`,
@@ -60,7 +60,7 @@ function ShufflerCard() {
               }}
             >
               <div className="flex items-center justify-between">
-                <span className="font-heading font-semibold text-sm text-primary">
+                <span className="font-heading font-semibold text-sm text-white">
                   {item.label}
                 </span>
                 <span
@@ -149,10 +149,10 @@ function TypewriterCard() {
     <div className="card-surface-dark p-8 h-full flex flex-col" id="feature-card-typewriter">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="font-heading font-bold text-xl text-background tracking-tight-custom mb-2">
+          <h3 className="font-heading font-bold text-xl text-white tracking-tight-custom mb-2">
             Sites de Alta Conversão
           </h3>
-          <p className="font-heading text-sm text-background/40 leading-relaxed">
+          <p className="font-heading text-sm text-white/40 leading-relaxed">
             Páginas que transformam visitantes em clientes com design e dados.
           </p>
         </div>
@@ -172,14 +172,14 @@ function TypewriterCard() {
           <div
             key={i}
             className={`${
-              line.includes('✓') ? 'text-accent/80' : 'text-background/50'
+              line.includes('✓') ? 'text-accent/80' : 'text-white/50'
             }`}
           >
             {line}
           </div>
         ))}
         {currentText && (
-          <div className="text-background/70">
+          <div className="text-white/70">
             {currentText}
             <span className="cursor-blink"></span>
           </div>
@@ -282,7 +282,7 @@ function SchedulerCard() {
   return (
     <div className="card-surface p-8 h-full flex flex-col" id="feature-card-scheduler">
       <div className="mb-6">
-        <h3 className="font-heading font-bold text-xl text-primary tracking-tight-custom mb-2">
+        <h3 className="font-heading font-bold text-xl text-white tracking-tight-custom mb-2">
           Presença Digital Premium
         </h3>
         <p className="font-heading text-sm text-slate/60 leading-relaxed">
@@ -303,7 +303,7 @@ function SchedulerCard() {
                 className={`aspect-square rounded-lg border flex items-center justify-center transition-all duration-300 ${
                   activeDay === i
                     ? 'bg-accent border-accent scale-95'
-                    : 'border-primary/10 hover:border-primary/20'
+                    : 'border-white/10 hover:border-white/20'
                 }`}
               >
                 {activeDay === i && (
@@ -327,7 +327,7 @@ function SchedulerCard() {
           ref={saveRef}
           className={`w-full py-2.5 rounded-xl font-heading text-xs font-semibold transition-all duration-300 ${
             savedVisible
-              ? 'bg-accent text-primary'
+              ? 'bg-accent text-white'
               : 'bg-primary/5 text-slate/50'
           }`}
         >
@@ -401,7 +401,7 @@ export default function Features() {
           <span className="font-mono-data text-xs text-accent uppercase tracking-widest mb-4 block">
             Serviços
           </span>
-          <h2 className="font-heading font-black text-3xl md:text-5xl text-primary tracking-tighter-custom leading-tight mb-4">
+          <h2 className="font-heading font-black text-3xl md:text-5xl text-white tracking-tighter-custom leading-tight mb-4">
             Artefatos que
             <span className="font-drama italic text-accent"> funcionam.</span>
           </h2>

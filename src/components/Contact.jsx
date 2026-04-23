@@ -44,7 +44,7 @@ export default function Contact() {
         </span>
 
         {/* Headline */}
-        <h2 className="contact-reveal opacity-0 font-heading font-black text-3xl md:text-5xl lg:text-6xl text-primary tracking-tighter-custom leading-tight mb-6">
+        <h2 className="contact-reveal opacity-0 font-heading font-black text-3xl md:text-5xl lg:text-6xl text-white tracking-tighter-custom leading-tight mb-6">
           Pronto para construir algo
           <span className="font-drama italic text-accent"> extraordinário</span>?
         </h2>
@@ -69,7 +69,7 @@ export default function Contact() {
           </a>
           <a
             href="mailto:contato@cztechnology.com"
-            className="btn-magnetic btn-outline border-primary/20 text-primary hover:text-accent hover:border-accent text-base px-8 py-4"
+            className="btn-magnetic btn-outline border-white/20 text-white hover:text-accent hover:border-accent text-base px-8 py-4"
             id="cta-email"
           >
             <span className="btn-bg"></span>
