@@ -14,9 +14,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Início', href: '#hero' },
-    { label: 'Serviços', href: '#features' },
-    { label: 'Processo', href: '#protocol' },
+    { label: 'Sobre', href: '#about' },
+    { label: 'Projetos', href: '#projects' },
+    { label: 'Skills', href: '#skills' },
     { label: 'Contato', href: '#contact' },
   ];
 
@@ -57,7 +57,7 @@ export default function Navbar() {
         ))}
         <a href="#contact" className="btn-magnetic btn-primary text-xs">
           <span className="btn-bg"></span>
-          Solicitar Orçamento
+          Entrar em Contato
         </a>
       </div>
 
@@ -94,7 +94,7 @@ export default function Navbar() {
             className="btn-magnetic btn-primary text-xs text-center"
           >
             <span className="btn-bg"></span>
-            Solicitar Orçamento
+            Entrar em Contato
           </a>
         </div>
       )}

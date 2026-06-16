@@ -1,8 +1,8 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
-import Philosophy from './components/Philosophy';
-import Protocol from './components/Protocol';
+import Projects from './components/Features';
+import About from './components/Philosophy';
+import Skills from './components/Protocol';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -30,9 +30,9 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Features />
-        <Philosophy />
-        <Protocol />
+        <About />
+        <Projects />
+        <Skills />
         <Contact />
       </main>
       <Footer />

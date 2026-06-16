@@ -4,111 +4,117 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Philosophy() {
+const STATS = [
+  { value: '3+', label: 'Anos de experiência' },
+  { value: '4', label: 'Projetos em destaque' },
+  { value: 'UVA', label: 'Engenharia de Software' },
+];
+
+const HIGHLIGHTS = [
+  'Análise e correção de bugs em sistemas corporativos',
+  'Desenvolvimento e manutenção de aplicações Java',
+  'Integração entre sistemas e APIs REST',
+  'Criação de agentes de IA e automações com Python e n8n',
+];
+
+export default function About() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate each word of the manifesto
-      const words = sectionRef.current.querySelectorAll('.word-reveal');
       gsap.fromTo(
-        words,
+        '.about-reveal',
         { y: 30, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.6,
-          stagger: 0.08,
+          duration: 0.8,
+          stagger: 0.1,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: 'top 60%',
+            start: 'top 65%',
             toggleActions: 'play none none none',
           },
         }
       );
 
-      // Parallax on the texture image
-      gsap.to('.philosophy-texture', {
-        yPercent: 20,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true,
-        },
-      });
+      gsap.fromTo(
+        '.stat-card',
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.12,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 55%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
     }, sectionRef);
-
     return () => ctx.revert();
   }, []);
 
-  const splitWords = (text, className = '') => {
-    return text.split(' ').map((word, i) => (
-      <span
-        key={i}
-        className={`word-reveal inline-block mr-[0.3em] opacity-0 ${className}`}
-      >
-        {word}
-      </span>
-    ));
-  };
-
   return (
-    <section
-      ref={sectionRef}
-      id="philosophy"
-      className="relative w-full overflow-hidden bg-primary"
-    >
-      {/* Parallax Texture Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div
-          className="philosophy-texture absolute inset-0 bg-cover bg-center opacity-[0.1]"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?w=1920&q=80&auto=format')`,
-            height: '140%',
-            top: '-20%',
-          }}
-        />
-      </div>
+    <section ref={sectionRef} id="about" className="section-padding bg-background">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
 
-      {/* Content */}
-      <div className="relative z-10 section-padding">
-        <div className="max-w-5xl mx-auto">
-          {/* Neutral Statement */}
-          <div className="mb-12">
-            <p className="font-heading text-lg md:text-xl text-white/50 leading-relaxed">
-              {splitWords(
-                'A maioria das empresas de tecnologia foca em: entregar projetos genéricos, rápidos e descartáveis.'
-              )}
-            </p>
-          </div>
-
-          {/* Contrast Statement — Massive */}
-          <div>
-            <p className="text-2xl md:text-4xl lg:text-5xl leading-tight">
-              {splitWords('Eu foco em:', 'font-heading font-bold text-white')}
-              <br />
-              {splitWords('construir', 'font-drama italic text-white text-3xl md:text-5xl lg:text-6xl')}
-              <span className="word-reveal inline-block mr-[0.3em] opacity-0 font-drama italic text-accent text-3xl md:text-5xl lg:text-6xl">
-                instrumentos digitais
-              </span>
-              {splitWords(
-                'que geram resultado real.',
-                'font-drama italic text-white text-3xl md:text-5xl lg:text-6xl'
-              )}
-            </p>
-          </div>
-
-          {/* Decorative line */}
-          <div className="mt-16 flex items-center gap-4">
-            <div className="h-px flex-1 bg-white/10"></div>
-            <span className="font-mono-data text-xs text-white/20 uppercase tracking-widest">
-              Manifesto
+          {/* Left: Bio */}
+          <div className="flex-1 max-w-2xl">
+            <span className="about-reveal opacity-0 font-mono-data text-xs text-accent uppercase tracking-widest mb-6 block">
+              Sobre mim
             </span>
-            <div className="h-px flex-1 bg-white/10"></div>
+
+            <h2 className="about-reveal opacity-0 font-heading font-black text-3xl md:text-5xl text-white tracking-tighter-custom leading-tight mb-8">
+              Construindo soluções que
+              <span className="font-drama italic text-accent"> funcionam.</span>
+            </h2>
+
+            <p className="about-reveal opacity-0 font-heading text-base md:text-lg text-white/50 leading-relaxed mb-6">
+              Profissional de tecnologia com atuação como Analista de Desenvolvimento desde 2023,
+              trabalhando com investigação e resolução de bugs, atendimento a clientes e sustentação
+              de sistemas corporativos.
+            </p>
+
+            <p className="about-reveal opacity-0 font-heading text-base md:text-lg text-white/50 leading-relaxed mb-10">
+              Combino experiência sólida em Java e Python com interesse crescente em IA e automações —
+              criando soluções que reduzem trabalho manual e entregam resultados reais. Cursando
+              Engenharia de Software na Universidade Veiga de Almeida, no Rio de Janeiro.
+            </p>
+
+            {/* Highlights */}
+            <ul className="space-y-3">
+              {HIGHLIGHTS.map((item, i) => (
+                <li key={i} className="about-reveal opacity-0 flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent mt-[7px] flex-shrink-0" />
+                  <span className="font-heading text-sm text-white/40 leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
+
+          {/* Right: Stats */}
+          <div className="lg:w-72 flex flex-col gap-4">
+            {STATS.map((stat) => (
+              <div
+                key={stat.label}
+                className="stat-card opacity-0 bg-[#22222E] border border-white/5 rounded-2xl p-7"
+              >
+                <p className="font-heading font-black text-5xl text-white tracking-tighter-custom mb-2">
+                  {stat.value}
+                </p>
+                <p className="font-mono-data text-xs text-white/35 uppercase tracking-widest">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>
